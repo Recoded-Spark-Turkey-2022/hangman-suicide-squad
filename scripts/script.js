@@ -36,7 +36,7 @@ function startJS() {
     let lives = 10; //the user has 10 lives in the begining
     let PCounter = document.createElement("p");
     const DivCounter = document.getElementById("counter");
-
+    
     for (let i = 0; i < alphabet.length; i++) {
       let btn = document.createElement("button");
       btn.setAttribute("class", "alphabet");
@@ -46,5 +46,24 @@ function startJS() {
     PCounter.innerText = `you have ${lives} lives left`;
     console.log(DivCounter);
     DivCounter.appendChild(PCounter);
+
+    //fetch Api 
+fetch("https://random-word-api.herokuapp.com/word?number=1")
+.then(res => res.json())
+.then((data) =>{
+    let newdata = data[0];
+
+    let word = newdata.split("");
+    console.log(word);
+    const together = document.querySelector("#place_word")
+    for(let i = 0; i < word.length; i++){
+        const blank = document.createElement("span");
+        blank.textContent = "_ ";
+        blank.classList.add("blank");
+        together.appendChild(blank);
+    }
+});
   }
 }
+
+
