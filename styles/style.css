@@ -1,3 +1,43 @@
+#start {
+    background : url(/video/gif3.gif) no-repeat center;
+    background-size:cover ;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+}
+h1 {
+    color: white;
+    font-size: xx-large;
+    position: absolute;
+    top :10%;
+    left: 37%;
+
+}
+#loding {
+    background: #000 url(https://media0.giphy.com/media/j4fbBhYgu8mNEHkQ4w/giphy.gif) no-repeat center;
+    background-size: 20%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+
+
+
+}
+.str {
+    padding: 1em 2em;
+    font-size: 1,2em; font-weight: bold;
+    border: 4px solid rgb(255, 255, 255);
+    background: none;
+    color: white;
+    border-radius: 4px;
+    position: absolute;
+    top: 75%;
+    left: 45%;
+}
+.str:hover{
+    background-color: burlywood;
+
 button.alphabet{
     margin: 1%;
     min-width: 7%;
