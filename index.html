@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
-  <div id="start_container">
-    <button type="button" id="startGame">start</button>
-  </div>
-  <div id="alphabetDiv"></div>
-  <div id="counter"></div>
-  <div id="place_word"></div>
-  
-<div id="start" >
-  <h1>Welcom To Our Game </h1>
-  <h2></h2>
-  <button class="str"> New Game </button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
 
-</div>
-<div id="loding">
- <audio id="audio-loding" >
+  <body>
+    <div id="start">
+      <h1>Welcome to Hangman Game</h1>
+      <button type="button" id="startBtn">New Game</button>
+    </div>
 
-  <source src="../video/audio loding.mp3">
- </audio>
-</div>
+    <div id="loading">
+      <audio id="audio-loding">
+        <source src="../video/audio loding.mp3" />
+      </audio>
+    </div>
 
-  <script src="./scripts/script.js"></script>
-</body>
+    <div id="game">
+      <div class="inner-section">
+        <div id="counter">
+          <p>you have <span id="lives"></span> lives left</p>
+        </div>
+        <div id="place_word"></div>
+        <div id="alphabetDiv"></div>
+      </div>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>

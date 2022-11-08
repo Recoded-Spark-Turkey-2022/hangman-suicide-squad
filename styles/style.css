@@ -1,63 +1,99 @@
+
+*,body{
+    background:#000 ;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
 #start {
-    background : url(/video/gif3.gif) no-repeat center;
+    background:url(/video/gif2.gif) no-repeat center ;
     background-size:cover ;
     height: 100vh;
     width: 100%;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
 }
+
 h1 {
-    color: white;
-    font-size: xx-large;
-    position: absolute;
-    top :10%;
-    left: 37%;
-
+    color: rgba(255, 255, 255, 0.886);
+    font-size: 45px;
 }
-#loding {
-    background: #000 url(https://media0.giphy.com/media/j4fbBhYgu8mNEHkQ4w/giphy.gif) no-repeat center;
-    background-size: 20%;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-
-
-
-}
-.str {
-    padding: 1em 2em;
-    font-size: 1,2em; font-weight: bold;
-    border: 4px solid rgb(255, 255, 255);
+#startBtn {
+    padding: 10px 15px;
+    font-size: 22px; font-weight: bold;
+    border: 2px solid rgb(255, 255, 255);
     background: none;
     color: white;
     border-radius: 4px;
-    position: absolute;
-    top: 75%;
-    left: 45%;
+    cursor: pointer;
 }
-.str:hover{
-    background-color: burlywood;
+#loading {
+    display: none;
+    background: rgb(0, 0, 0) url(https://media0.giphy.com/media/j4fbBhYgu8mNEHkQ4w/giphy.gif) no-repeat center;
+    background-size: 20%;
+    height: 100vh;
+    width: 100%;
 
+}
+
+
+#startBtn:hover{
+    background-color: rgb(250, 250, 250);
+    color: #000;
+    transform: scale(1.1);
+    transition: all ease-in-out .2s;
+}
+
+#game{
+    background:url(/video/gif3.gif) no-repeat center ;
+    background-size:cover ;
+    display: none;
+    max-width: 100%;
+    text-align: center;
+    color: white;
+   
+}
+.inner-section{
+    margin: auto;
+    background:none;
+    text-align: center;
+    height: 100vh;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
 button.alphabet{
-    margin: 1%;
-    min-width: 7%;
-    
+    margin: 7px;
+    min-width: 50px;
+    padding: 8px 15px;
+    border: 2px solid rgb(250, 250, 250);
+    background: none;
+    color: white;
+    font-size: 22px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+button.alphabet:hover{
+    background-color: rgb(250, 250, 250);
+    color: #000;
+    transform: scale(1.1);
+    transition: all ease-in-out .2s;
 }
 #alphabetDiv{
     text-align: center;
-    width: 75%;
-    margin: auto;
 }
 
-#startGame{
-    display: block;
-    width: 10%;
-    margin: auto;
-}
-#counter p{
-    border: 2px solid rgb(0, 68, 255);
-  border-radius: 5px;
-  width: 50%;
-  margin: 5% auto;
-  text-align: center;
+#counter{
+    font-size: 22px;
+    font-weight: 600;
+    padding: 12px;
+    color:rgb(250, 250, 250); ;
+    border: 2px solid rgb(250, 250, 250);
+    border-radius: 5px;
+    text-align: center;
 }
