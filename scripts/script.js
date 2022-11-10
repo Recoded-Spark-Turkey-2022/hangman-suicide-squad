@@ -80,7 +80,7 @@ fetch("https://random-word-api.herokuapp.com/word?number=1")
   document.querySelector('#alphabetDiv').addEventListener('click',(e)=> {
     if(e.target.tagName === 'BUTTON')
     {
-      if(lives > 0)
+      if(lives >= 0)
       {
         e.target.classList.add('disable')
         if(word.find((value)=> value === e.target.innerText))
@@ -99,8 +99,15 @@ fetch("https://random-word-api.herokuapp.com/word?number=1")
         }else{
           lives=lives-1
           if(lives >= 0)
-          {
+          { 
+            let img = 1;
+            let newImg = document.querySelector(".km"+ lives)
+            newImg.setAttribute("src","./video/kishimoto"+lives+".PNG")
+            
+
             document.getElementById('lives').innerText =lives;
+            img = img + 1
+
           }
         }
     }   
