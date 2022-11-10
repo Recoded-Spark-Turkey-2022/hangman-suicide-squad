@@ -97,3 +97,11 @@ button.alphabet:hover{
     border-radius: 5px;
     text-align: center;
 }
+
+.disable{
+    background-color: rgb(250, 250, 250);
+    color: #000;
+    transform: scale(0);
+    transition: all ease-in-out 0s;
+    opacity: 68%;
+}

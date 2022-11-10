@@ -72,9 +72,41 @@ fetch("https://random-word-api.herokuapp.com/word?number=1")
   for(let i = 0; i < word.length; i++){
       const blank = document.createElement("span");
       blank.textContent = "_ ";
-      blank.classList.add("blank");
+      blank.setAttribute('id',i);
       together.appendChild(blank);
   }
+
+  
+  document.querySelector('#alphabetDiv').addEventListener('click',(e)=> {
+    if(e.target.tagName === 'BUTTON')
+    {
+      if(lives > 0)
+      {
+        e.target.classList.add('disable')
+        if(word.find((value)=> value === e.target.innerText))
+        {
+          let selectedChar = [];
+          word.map((value,index)=> {
+            if(value === e.target.innerText)
+            {
+              selectedChar.push(index)
+            }
+          })
+            for(let i =0;i<selectedChar.length;i++)
+            {
+              document.getElementById(selectedChar[i]).innerText = e.target.innerText
+            }
+        }else{
+          lives=lives-1
+          if(lives >= 0)
+          {
+            document.getElementById('lives').innerText =lives;
+          }
+        }
+    }   
+  } 
+
+  } )
 });
 }
 })
