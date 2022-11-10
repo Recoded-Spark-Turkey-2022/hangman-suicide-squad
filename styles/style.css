@@ -54,6 +54,7 @@ h1 {
     max-width: 100%;
     text-align: center;
     color: white;
+    
    
 }
 .inner-section{
@@ -83,6 +84,36 @@ button.alphabet:hover{
     color: #000;
     transform: scale(1.1);
     transition: all ease-in-out .2s;
+}
+#buttons{
+    display: flex;
+  
+}
+#restart,#hint{
+    padding: 10px 15px;
+    font-size: 18px; font-weight: bold;
+    border: 2px solid rgb(255, 255, 255);
+    background: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 40px;
+}
+#hint:hover{
+    background-color: rgb(250, 250, 250);
+    color: #000;
+    transform: scale(1.1);
+    transition: all ease-in-out .2s;
+}
+#restart:hover{
+    background-color: rgb(250, 250, 250);
+    color: #000;
+    transform: scale(1.1);
+    transition: all ease-in-out .2s;
+}
+#place_word{
+    font-size: 40px;
+
 }
 #alphabetDiv{
     text-align: center;
