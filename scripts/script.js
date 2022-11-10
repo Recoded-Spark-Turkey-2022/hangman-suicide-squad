@@ -127,6 +127,9 @@ placeWord.appendChild(spanDiv);
             img = img + 1
             lives=lives-1
 
+          }else if(lives === 0)
+          {
+            document.querySelector('#counter > p').innerText = "Game Over"
           }
 
         }
@@ -134,6 +137,12 @@ placeWord.appendChild(spanDiv);
   } 
 
   } )
+  document.getElementById('hint').addEventListener('click',()=>{
+    if(spanDiv.innerText.search('_') > -1)
+    {
+      document.getElementById(spanDiv.innerText.search('_')).innerText =  word[spanDiv.innerText.search('_')]
+    }
+  });
 });
 
   //restart function:
