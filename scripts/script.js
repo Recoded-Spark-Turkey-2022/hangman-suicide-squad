@@ -105,19 +105,30 @@ placeWord.appendChild(spanDiv);
             {
               document.getElementById(selectedChar[i]).innerText = e.target.innerText
             }
+            if(spanDiv.innerText.search('_') === -1)
+            {
+              let sample = document.getElementById("got-music");
+              sample.play();
+              let win = document.createElement('img')
+              win.setAttribute('src','https://cdn.discordapp.com/attachments/1037772793951043617/1040259002900160562/among_us.gif')
+              win.classList.add('winning')
+              document.querySelector('body').prepend(win)
+              setTimeout(()=> {win.style.display = "none";} ,8700);
+            }
         }else{
-          lives=lives-1
-          if(lives >= 0)
+          if(lives > 0)
           { 
+            console.log(lives)
             let img = 1;
             let newImg = document.querySelector(".km"+ lives)
             newImg.setAttribute("src","./video/kishimoto"+lives+".PNG")
             
-
             document.getElementById('lives').innerText =lives;
             img = img + 1
+            lives=lives-1
 
           }
+
         }
     }   
   } 
